@@ -1,0 +1,265 @@
+# Tasks Configuration
+
+code_review_task:
+  description: >
+    Review the provided code file for quality issues, best practices, and potential bugs.
+    Look for code smells, anti-patterns, and areas for improvement. Focus on readability,
+    maintainability, and adherence to language-specific conventions.
+  expected_output: >
+    A detailed report listing:
+    1. Code quality issues with line numbers and explanations
+    2. Best practice violations and recommendations
+    3. Potential bugs or logical errors
+    4. Suggestions for improving readability and maintainability
+    5. Code complexity analysis if applicable
+  agent: code_reviewer
+
+security_analysis_task:
+  description: >
+    Analyze the provided code for security vulnerabilities. Look for common security issues
+    such as injection flaws, authentication problems, authorization issues, data exposure,
+    and other OWASP Top 10 vulnerabilities relevant to the code's functionality.
+  expected_output: >
+    A security assessment report including:
+    1. Identified security vulnerabilities with severity ratings
+    2. Specific code locations where issues were found
+    3. Explanation of each vulnerability and potential impact
+    4. Recommendations for remediation
+    5. References to relevant security standards or guidelines
+  agent: security_analyst
+
+performance_optimization_task:
+  description: >
+    Review the code for performance optimization opportunities. Look for inefficient algorithms,
+    unnecessary computations, memory leaks, database query issues, and other performance
+    bottlenecks. Consider both time and space complexity.
+  expected_output: >
+    A performance optimization report containing:
+    1. Identified performance bottlenecks with explanations
+    2. Specific code sections that need optimization
+    3. Suggestions for algorithmic improvements
+    4. Memory usage analysis and recommendations
+    5. Database query optimization suggestions if applicable
+  agent: performance_optimizer
+
+project_architecture_task:
+  description: >
+    Review the overall project structure, architecture, and design patterns. Assess whether
+    the project follows sound architectural principles, is maintainable, and can scale
+    appropriately for its intended use case.
+  expected_output: >
+    An architectural review report including:
+    1. Assessment of the project's architectural strengths and weaknesses
+    2. Identification of architectural anti-patterns or issues
+    3. Recommendations for architectural improvements
+    4. Scalability analysis and suggestions
+    5. Maintainability assessment
+  agent: architect
+
+design_review_task:
+  description: >
+    Review the user interface design and user experience. Assess the application's usability,
+    accessibility, visual design consistency, and adherence to design system principles.
+  expected_output: >
+    A design review report containing:
+    1. Usability issues and recommendations
+    2. Accessibility compliance assessment
+    3. Visual design consistency evaluation
+    4. User experience flow analysis
+    5. Suggestions for design improvements
+  agent: design_reviewer
+
+scalability_assessment_task:
+  description: >
+    Assess the project's scalability characteristics. Analyze how the system will perform
+    under increased load and identify potential scaling limitations or bottlenecks.
+  expected_output: >
+    A scalability assessment report including:
+    1. Current scalability limitations
+    2. Identification of potential bottlenecks under load
+    3. Recommendations for improving scalability
+    4. Load handling capacity analysis
+    5. Suggestions for horizontal/vertical scaling strategies
+  agent: scalability_expert
+
+deployment_configuration_task:
+  description: >
+    Review deployment configurations and processes. Ensure proper environment setup,
+    configuration management, and deployment pipeline implementation.
+  expected_output: >
+    A deployment configuration report containing:
+    1. Issues with current deployment setup
+    2. Recommendations for configuration improvements
+    3. Security considerations for deployment environments
+    4. Suggestions for CI/CD pipeline improvements
+    5. Best practices for deployment management
+  agent: deployment_engineer
+
+infrastructure_review_task:
+  description: >
+    Review infrastructure configurations including servers, databases, networking, and
+    cloud services. Assess security, reliability, and performance of the infrastructure.
+  expected_output: >
+    An infrastructure review report including:
+    1. Infrastructure security assessment
+    2. Reliability and redundancy analysis
+    3. Performance optimization recommendations
+    4. Cost optimization suggestions
+    5. Compliance with infrastructure best practices
+  agent: infrastructure_specialist
+
+deployment_security_audit_task:
+  description: >
+    Audit deployment configurations for security vulnerabilities. Check for secure
+    configuration of servers, containers, and deployment processes.
+  expected_output: >
+    A deployment security audit report containing:
+    1. Identified security vulnerabilities in deployment configs
+    2. Recommendations for secure configuration
+    3. Best practices for secure deployment
+    4. Compliance with security standards
+    5. Risk assessment of current deployment security posture
+  agent: security_auditor
+
+system_analysis_task:
+  description: >
+    Analyze system logs, running processes, CPU usage, memory consumption, and other
+    system metrics to identify potential issues or anomalies.
+  expected_output: >
+    A system analysis report including:
+    1. Summary of system resource usage
+    2. Identification of problematic processes or services
+    3. Analysis of log file anomalies
+    4. Performance bottlenecks at system level
+    5. Recommendations for system optimization
+  agent: system_analyst
+
+performance_diagnostics_task:
+  description: >
+    Diagnose system performance issues by analyzing CPU, memory, disk I/O, and other
+    resource utilization metrics. Identify bottlenecks and provide optimization suggestions.
+  expected_output: >
+    A performance diagnostics report containing:
+    1. Resource utilization analysis
+    2. Identification of performance bottlenecks
+    3. Process-level performance issues
+    4. System-level optimization recommendations
+    5. Monitoring and alerting suggestions
+  agent: performance_engineer
+
+network_diagnostics_task:
+  description: >
+    Diagnose network connectivity issues, bandwidth utilization, latency problems, and
+    other network anomalies. Analyze network configurations and traffic patterns.
+  expected_output: >
+    A network diagnostics report including:
+    1. Network connectivity assessment
+    2. Bandwidth utilization analysis
+    3. Latency and packet loss identification
+    4. Network configuration review
+    5. Recommendations for network optimization
+  agent: network_specialist
+
+# New tasks for additional crews
+
+code_recommendation_task:
+  description: >
+    Analyze the provided code and provide detailed recommendations for improvements,
+    optimizations, and best practices. Focus on code quality, performance, security,
+    and maintainability. Identify specific areas where the code can be enhanced.
+  expected_output: >
+    A comprehensive code recommendations report including:
+    1. Specific code sections that need improvement with line numbers
+    2. Detailed explanations of why each recommendation is beneficial
+    3. Code examples showing the recommended improvements
+    4. Prioritization of recommendations (high, medium, low priority)
+    5. Estimated effort required for each recommendation
+  agent: code_recommender
+
+project_planning_task:
+  description: >
+    Create a comprehensive project plan based on the provided requirements or project idea.
+    Break down the project into manageable phases, define milestones, and estimate timelines.
+    Consider technical requirements, resources needed, and potential challenges.
+  expected_output: >
+    A detailed project plan including:
+    1. Project overview and objectives
+    2. Phased breakdown of implementation steps
+    3. Timeline estimates for each phase
+    4. Resource requirements and allocation
+    5. Risk assessment and mitigation strategies
+    6. Success criteria and deliverables for each phase
+  agent: planning_expert
+
+task_breakdown_task:
+  description: >
+    Break down a complex project or feature into smaller, manageable tasks. Create a
+    detailed task list with clear descriptions, dependencies, and estimated effort for
+    each task. Ensure tasks are specific, measurable, and achievable.
+  expected_output: >
+    A detailed task breakdown including:
+    1. Hierarchical organization of tasks (epics, features, user stories, subtasks)
+    2. Clear descriptions of each task
+    3. Dependencies between tasks
+    4. Estimated effort for each task (in hours or story points)
+    5. Priority levels for tasks
+    6. Assignment recommendations (if applicable)
+  agent: task_breakdown_specialist
+
+code_generation_task:
+  description: >
+    Write high-quality, well-documented code based on the provided specifications,
+    requirements, or task descriptions. Ensure the code follows best practices, is
+    secure, and is maintainable. Include appropriate comments and documentation.
+  expected_output: >
+    Complete, functional code implementation including:
+    1. Well-structured, readable code following best practices
+    2. Comprehensive comments explaining complex logic
+    3. Documentation for functions, classes, and modules
+    4. Error handling and edge case considerations
+    5. Unit tests or examples demonstrating usage
+  agent: code_generator
+
+implementation_task:
+  description: >
+    Lead the implementation of a software project or feature from planning to completion.
+    Coordinate between different aspects of development, ensure code quality, manage
+    timelines, and deliver a complete, functional solution that meets requirements.
+  expected_output: >
+    A complete software implementation including:
+    1. Fully functional codebase
+    2. Documentation and user guides
+    3. Test cases and quality assurance measures
+    4. Deployment and setup instructions
+    5. Project summary and lessons learned
+  agent: implementation_lead
+
+testing_task:
+  description: >
+    Create and execute test plans to ensure software quality and reliability. Develop
+    comprehensive test cases that cover functionality, edge cases, and potential failure
+    scenarios. Identify and document any issues found during testing.
+  expected_output: >
+    A comprehensive testing report including:
+    1. Test plan and strategy
+    2. Test cases with expected outcomes
+    3. Test execution results
+    4. Identified bugs or issues with reproduction steps
+    5. Recommendations for improvements based on testing
+  agent: testing_specialist
+
+documentation_task:
+  description: >
+    Create comprehensive technical documentation for the provided software project or
+    codebase. Ensure documentation is clear, accurate, and accessible to its intended
+    audience. Include installation guides, usage instructions, API documentation, and
+    other relevant materials.
+  expected_output: >
+    Complete technical documentation including:
+    1. Installation and setup guide
+    2. Usage instructions and examples
+    3. API documentation (if applicable)
+    4. Architecture and design documentation
+    5. Troubleshooting guide
+    6. Best practices and recommendations
+  agent: documentation_specialist
